@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Lamp</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(assets/images/3690.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3 bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">House of Lamp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Ruang Tamu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="RuangTengah.html">Ruang Tengah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="Kamar.html">Kamar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="Dapur.html">Dapur</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- The Lamp -->
+    <div class="mt-5 pt-5 mb-3">
+        <!-- toggle semua lampu  -->
+        <div class="form-check form-switch d-flex flex-column align-items-center mt-5 pt-5">
+            <input class="form-check-input" type="checkbox" role="switch" id="toggle0" onclick="allSaklar()">
+        </div>
+        <div class="row g-3 ms-5 me-5 mt-5 mb-3 pt-5 d-flex justify-content-center">
+
+            <!-- Lampu 1 -->
+            <div class="col-md-2 d-flex flex-column align-items-center">
+                <img src="assets/images/off.png" alt="" id="lampu1" width="200">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggle1" onclick="saklar()">
+                </div>
+            </div>
+            <!-- Lampu 2 -->
+            <div class="col-md-2 d-flex flex-column align-items-center">
+                <img src="assets/images/off.png" alt="" id="lampu2" width="200">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggle2" onclick="saklar()">
+                </div>
+            </div>
+            <!-- Lampu 3 -->
+            <div class="col-md-2 d-flex flex-column align-items-center">
+                <img src="assets/images/off.png" alt="" id="lampu3" width="200">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggle3" onclick="saklar()">
+                </div>
+            </div>
+            <!-- Lampu 4 -->
+            <div class="col-md-2 d-flex flex-column align-items-center">
+                <img src="assets/images/off.png" alt="" id="lampu4" width="200">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggle4" onclick="saklar()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INI YANG MASIH PAKE TOMBOL
+    <div class="row g-3 ms-3 me-3 mt-5 pt-5 ">
+        <div class="d-flex flex-column align-items-center mt-5 pt-5">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            </div>           
+            <button class="btn btn-warning" onclick="saklar('on',0)">idupin semua</button>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="assets/images/off.png" alt="" id="lampu1" width="300">
+            <div class="d-flex gap-2">
+                <button onclick="saklar('on',1)" class="btn btn-warning">idupin</button>
+                <button onclick="saklar('off',1)" class="btn btn-secondary">matiin</button>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="assets/images/off.png" alt="" id="lampu2" width="300">
+            <div class="d-flex gap-2">
+                <button onclick="saklar('on',2)" class="btn btn-warning">idupin</button>
+                <button onclick="saklar('off',2)" class="btn btn-secondary">matiin</button>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="assets/images/off.png" alt="" id="lampu3" width="300">
+            <div class="d-flex gap-2">
+                <button onclick="saklar('on',3)" class="btn btn-warning">idupin</button>
+                <button onclick="saklar('off',3)" class="btn btn-secondary">matiin</button>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="saklar.js" type="application/javascript"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
